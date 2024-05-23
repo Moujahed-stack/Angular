@@ -1,0 +1,9 @@
+<div class="user-list-container" @listAnimation>
+  <div *ngFor="let user of filteredUsers" class="user-card" (click)="navigateToUserDetails.emit(user.id)">
+    <img [src]="user.avatar" alt="User Avatar" class="avatar">
+    <div class="user-info">
+      <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+      <p>{{ user.email }}</p>
+    </div>
+  </div>
+</div>

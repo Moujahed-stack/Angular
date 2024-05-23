@@ -1,0 +1,74 @@
+.user-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.user-card {
+  max-width: 400px;
+  width: 90%;
+  border-radius: 25px; 
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+  animation: cardAnimation 1s ease-in-out forwards; 
+}
+
+@keyframes cardAnimation {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.user-avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 80px rgba(255, 255, 255, 0.2); /* Glowing effect */
+}
+
+mat-card-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+mat-card-subtitle, mat-card-content p {
+  font-size: 20px;
+  color: #333; 
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+mat-card-actions button {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; 
+  background-color: #fd5f75; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+mat-card-actions button:hover {
+  background-color: #ff8c96; 
+}

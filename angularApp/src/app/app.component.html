@@ -1,0 +1,7 @@
+
+<div id="loading-bar"><h1>LOADING...</h1></div>
+
+<router-outlet></router-outlet>
+
+<app-header (searchUser)="searchUserById($event)"></app-header>
+<app-user-list [users]="users" [filteredUsers]="filteredUsers" (navigateToUserDetails)="navigateToUserDetails($event)"></app-user-list>
